@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
+
+      Search: <input ng-model="query">
+
+    </div>
+    <div class="col-md-10">
+      <!--Body content-->
+
+      <ul class="phones">
+        <li ng-repeat="cert in certificados | filter:query">
+          {{cert.id}}
+          <p>{{cert.descricao}}</p>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
