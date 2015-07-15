@@ -1,0 +1,5 @@
+certificadosApp.factory('cadastroEventoService', function() {
+
+	
+	
+});

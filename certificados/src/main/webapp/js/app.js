@@ -4,7 +4,6 @@ var certificadosApp = angular.module('certApp', [ 'ngRoute' ]);
 certificadosApp.config(function($routeProvider) {
 	$routeProvider
 
-	// route for the home page
 	.when('/', {
 		templateUrl : 'pages/home.html',
 		controller : 'mainController'
@@ -16,5 +15,11 @@ certificadosApp.config(function($routeProvider) {
 		controller : 'pesquisaController'
 	})
 
+	// route for the about page
+	.when('/cadastroEvento', {
+		templateUrl : 'pages/cadastroEvento.html',
+		controller : 'cadastroEventoController'
+	})
+	
 });
 
