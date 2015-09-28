@@ -8,6 +8,7 @@
 <link href="css/sb-admin-2.css" rel="stylesheet">
 <link href="css/morris.css" rel="stylesheet">
 <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="css/app.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<div id="wrapper">
@@ -38,11 +39,11 @@
 								</span>
 							</div> <!-- /input-group -->
 						</li>
-						<li><a href="#"><i class="fa fa-area-chart fa-fw"></i>Painel</a></li>
+						<li><a href="#"><i class="fa fa-area-chart fa-fw"></i>{{'app.views.menu.painel' | translate}}</a></li>
 						<li><a href="#pesquisa"><i class="fa fa-search fa-fw"></i>
-								Pesquisa</a></li>
+								{{'app.views.menu.pesquisa' | translate}}</a></li>
 						<li><a href="#cadastroEvento"><i class="fa fa-university fa-fw"></i>
-								Criar novo evento</a></li>
+								{{'app.views.menu.evento.novo' | translate}}</a></li>
 					</ul>
 				</div>
 				<!-- /.sidebar-collapse -->
@@ -68,7 +69,10 @@
 	<!-- /#wrapper -->
 
 	<script src="js/angular.min.js"></script>
+	<script src="js/angular-resource.min.js"></script>
 	<script src="js/angular-route.js"></script>
+	<script src="js/libs/angular-translate.min.js"></script>
+	<script src="js/libs/angular-translate-loader-static-files.js"></script>
 	<script src="js/app.js"></script>
 	<script src="controllers/mainController.js"></script>
 	<script src="controllers/pesquisaController.js"></script>

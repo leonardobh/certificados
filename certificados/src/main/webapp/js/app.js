@@ -1,7 +1,7 @@
-var certificadosApp = angular.module('certApp', [ 'ngRoute' ]);
+var certificadosApp = angular.module('certApp', [ 'ngRoute', 'pascalprecht.translate','ngResource' ]);
 
 // configure our routes
-certificadosApp.config(function($routeProvider) {
+certificadosApp.config(function($routeProvider,$translateProvider) {
 	$routeProvider
 
 	.when('/', {
@@ -19,7 +19,15 @@ certificadosApp.config(function($routeProvider) {
 	.when('/cadastroEvento', {
 		templateUrl : 'pages/cadastroEvento.html',
 		controller : 'cadastroEventoController'
-	})
+	});
+	
+	$translateProvider.useStaticFilesLoader({
+        prefix: '../certificados/i18n/locale-',
+        suffix: '.json'
+    });
+	$translateProvider.preferredLanguage('pt_BR');
+	
+	
 	
 });
 

@@ -1,15 +1,42 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="form-group">
-			<label for="nomeEvento">Nome do Evento:</label> <input type="text"
+			<label for="nomeEvento">{{'app.views.evento.nome' | translate}}</label> <input type="text"
 				class="form-control" id="nomeEvento" data-ng-required="true"
-				data-ng-model="evento.nome">
+				data-ng-model="evento.nomeEvento">
 		</div>
 		<div class="form-group">
-			<label for="localEvento">Local do Evento:</label> <input type="text"
+			<label for="localEvento">{{'app.views.evento.local' | translate}}</label> <input type="text"
 				class="form-control" id="localEvento" data-ng-required="true"
-				data-ng-model="evento.local">
+				data-ng-model="evento.localEvento">
 		</div>
-		<button ng-click="cadastrarNovoEvento()" class="btn btn-default">Criar</button>
+		<button data-ng-click="cadastrarNovoEvento()" class="btn btn-default">{{'app.views.button.salvar' | translate}}</button>
 	</div>
+
+	<div class="table-responsive">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>{{'app.views.table.evento.id' | translate}}</th>
+					<th>{{'app.views.table.evento.nome' | translate}}</th>
+					<th>{{'app.views.table.evento.local' | translate}}</th>
+					<th>{{'app.views.table.acao' | translate}}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr data-ng-repeat="evento in eventos track by evento.id">
+					<td>{{evento.id}}</td>
+					<td>{{evento.nomeEvento}}</td>
+					<td>{{evento.localEvento}}</td>
+					<td>
+						<a class="icon" href="" data-ng-click="editar(evento)"><i class="fa fa-pencil"></i></a>
+						<a class="icon" href="" data-ng-click="remover(evento)"><i class="fa fa-times"></i></a>
+						
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+
 </div>
