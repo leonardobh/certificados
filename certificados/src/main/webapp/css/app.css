@@ -1,0 +1,8 @@
+a.icon {
+	text-decoration:none;
+	color:black;
+}
+
+a.icon:hover {
+	color:grey;
+}

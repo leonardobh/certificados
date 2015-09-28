@@ -1,0 +1,11 @@
+{ "app.views.menu.painel" : "Painel",
+  "app.views.menu.pesquisa" : "Pesquisa",
+  "app.views.menu.evento.novo" : "Criar novo evento",
+  "app.views.evento.nome" :"Nome do evento ",
+  "app.views.evento.local" :"Local do evento ",
+  "app.views.table.evento.id" : "Id",
+  "app.views.table.evento.nome" : "Nome",
+  "app.views.table.evento.local" : "Local",
+  "app.views.button.salvar" : "Salvar",
+  "app.views.table.acao" : "Ações"
+}
